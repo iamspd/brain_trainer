@@ -12,10 +12,46 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
+        android:onClick="onGoClick"
         android:padding="24dp"
         android:text="Go!"
         android:textAllCaps="false"
-        android:onClick="onGoClick"
-        android:textSize="82sp" />
+        android:textSize="82sp"
+        android:visibility="invisible" />
 
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/color_primary"
+        android:padding="16dp"
+        android:text="30s"
+        android:textColor="@color/color_light"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/color_secondary_dark"
+        android:padding="16dp"
+        android:text="0/0"
+        android:textColor="@color/color_light"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/tvSum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:text="31 + 12"
+        android:textColor="@color/black"
+        android:textSize="28sp" />
 </RelativeLayout>
