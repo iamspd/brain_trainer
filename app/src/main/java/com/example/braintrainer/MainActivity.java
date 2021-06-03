@@ -38,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         tvResult.setText("");
         btnPlayAgain.setVisibility(View.INVISIBLE);
 
+        generateQuestion();
+
         new CountDownTimer(30100, 1000) {
 
             @Override
@@ -150,7 +152,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findAllViews();
-        generateQuestion();
         onPlayGameAgainClick(btnPlayAgain);
 
     }
