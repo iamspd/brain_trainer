@@ -29,7 +29,13 @@ public class MainActivity extends AppCompatActivity {
     // methods
     public void onAnswerButtonClick(View view){
 
-        Log.i(TAG, (String) view.getTag());
+        // Log.i(TAG, (String) view.getTag());
+
+        if (view.getTag().equals(locationOfCorrectAnswers)){
+
+            Log.i("Answer is: ", "correct");
+
+        }
 
     }
 
