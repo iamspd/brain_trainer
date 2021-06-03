@@ -24,25 +24,32 @@ public class MainActivity extends AppCompatActivity {
     private Random randomNumber;
     private int firstNumber, secondNumber;
     private int locationOfCorrectAnswers, correctAnswer, inCorrectAnswers;
+    private int gameScore= 0;
+    private int numberOfQuestions = 0;
     private ArrayList<Integer> sumAnswers;
 
     // methods
-    public void onAnswerButtonClick(View view){
+    public void onAnswerButtonClick(View view) {
 
         // Log.i(TAG, (String) view.getTag());
 
-        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswers))){
+        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswers))) {
 
-            Log.i("Answer is: ", "correct");
+            // Log.i("Answer is: ", "correct");
+            gameScore++;
             tvResult.setText("Correct");
 
         } else {
             tvResult.setText("Incorrect!");
         }
 
+        numberOfQuestions++;
+
+        String score = gameScore + "/" + numberOfQuestions;
+        tvScore.setText(score);
     }
 
-    public void onGoClick(View view){
+    public void onGoClick(View view) {
         btnGo.setVisibility(View.INVISIBLE);
     }
 
@@ -55,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
         tvResult = findViewById(R.id.tvResult);
+        tvScore = findViewById(R.id.tvScore);
+        tvTimer = findViewById(R.id.tvTimer);
 
     }
 
@@ -80,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
         locationOfCorrectAnswers = randomNumber.nextInt(4);
 
-        for (int i = 0; i < 4; i++){
+        for (int i = 0; i < 4; i++) {
 
             if (locationOfCorrectAnswers == i) {
                 sumAnswers.add(correctAnswer);
