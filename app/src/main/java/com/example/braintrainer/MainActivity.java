@@ -37,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
             tvResult.setText("Correct");
 
         } else {
-
             tvResult.setText("Incorrect! Try next time.");
-
         }
 
     }
