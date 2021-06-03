@@ -155,6 +155,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:backgroundTint="@color/purple_700"
         android:padding="12dp"
+        android:onClick="onPlayGameAgainClick"
         android:id="@+id/btnPlayAgain" />
 
 </RelativeLayout>

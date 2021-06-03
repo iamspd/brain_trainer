@@ -31,6 +31,35 @@ public class MainActivity extends AppCompatActivity {
 
     // methods
 
+    public void onPlayGameAgainClick(View view) {
+
+        tvScore.setText("0/0");
+        tvTimer.setText("30s");
+        tvResult.setText("");
+        btnPlayAgain.setVisibility(View.INVISIBLE);
+
+        new CountDownTimer(30100, 1000) {
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                String time = millisUntilFinished / 1000 + "s";
+                tvTimer.setText(time);
+
+            }
+
+            @Override
+            public void onFinish() {
+
+                btnPlayAgain.setVisibility(View.VISIBLE);
+                String result = "Your score: " + gameScore +
+                        "/" + numberOfQuestions;
+                tvResult.setText(result);
+
+            }
+        }.start();
+
+    }
     public void generateQuestion() {
 
         sumAnswers = new ArrayList<>();
@@ -122,26 +151,8 @@ public class MainActivity extends AppCompatActivity {
 
         findAllViews();
         generateQuestion();
+        onPlayGameAgainClick(btnPlayAgain);
 
-        new CountDownTimer(30100, 1000) {
-
-            @Override
-            public void onTick(long millisUntilFinished) {
-
-                String time = millisUntilFinished / 1000 + "s";
-                tvTimer.setText(time);
-
-            }
-
-            @Override
-            public void onFinish() {
-
-                String result = "Your score: " + gameScore +
-                "/" + numberOfQuestions;
-                tvResult.setText(result);
-
-            }
-        }.start();
     }
 
 }
