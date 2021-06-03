@@ -3,6 +3,7 @@ package com.example.braintrainer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -120,7 +121,25 @@ public class MainActivity extends AppCompatActivity {
         findAllViews();
         generateQuestion();
 
+        new CountDownTimer(30100, 1000) {
 
+            @Override
+            public void onTick(long millisUntilFinished) {
+
+                String time = millisUntilFinished / 1000 + "s";
+                tvTimer.setText(time);
+
+            }
+
+            @Override
+            public void onFinish() {
+
+                String result = "Your score: " + gameScore +
+                "/" + numberOfQuestions;
+                tvResult.setText(result);
+
+            }
+        }.start();
     }
 
 }
