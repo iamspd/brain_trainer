@@ -29,50 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> sumAnswers;
 
     // methods
-    public void onAnswerButtonClick(View view) {
-
-        // Log.i(TAG, (String) view.getTag());
-
-        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswers))) {
-
-            // Log.i("Answer is: ", "correct");
-            gameScore++;
-            tvResult.setText("Correct");
-
-        } else {
-            tvResult.setText("Incorrect!");
-        }
-
-        numberOfQuestions++;
-
-        String score = gameScore + "/" + numberOfQuestions;
-        tvScore.setText(score);
-    }
-
-    public void onGoClick(View view) {
-        btnGo.setVisibility(View.INVISIBLE);
-    }
-
-    private void findAllViews() {
-
-        btnGo = findViewById(R.id.btnGo);
-        tvSum = findViewById(R.id.tvSum);
-        btn0 = findViewById(R.id.btn0);
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        tvResult = findViewById(R.id.tvResult);
-        tvScore = findViewById(R.id.tvScore);
-        tvTimer = findViewById(R.id.tvTimer);
-
-    }
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        findAllViews();
+    public void generateQuestion() {
 
         sumAnswers = new ArrayList<>();
 
@@ -113,6 +70,57 @@ public class MainActivity extends AppCompatActivity {
         btn1.setText(Integer.toString(sumAnswers.get(1)));
         btn2.setText(Integer.toString(sumAnswers.get(2)));
         btn3.setText(Integer.toString(sumAnswers.get(3)));
+
+    }
+
+    public void onAnswerButtonClick(View view) {
+
+        // Log.i(TAG, (String) view.getTag());
+
+        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswers))) {
+
+            // Log.i("Answer is: ", "correct");
+            gameScore++;
+            tvResult.setText("Correct");
+
+        } else {
+            tvResult.setText("Incorrect!");
+        }
+
+        numberOfQuestions++;
+
+        String score = gameScore + "/" + numberOfQuestions;
+        tvScore.setText(score);
+        generateQuestion();
+    }
+
+    public void onGoClick(View view) {
+        btnGo.setVisibility(View.INVISIBLE);
+    }
+
+    private void findAllViews() {
+
+        btnGo = findViewById(R.id.btnGo);
+        tvSum = findViewById(R.id.tvSum);
+        btn0 = findViewById(R.id.btn0);
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
+        tvResult = findViewById(R.id.tvResult);
+        tvScore = findViewById(R.id.tvScore);
+        tvTimer = findViewById(R.id.tvTimer);
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        findAllViews();
+        generateQuestion();
+
+
     }
 
 }
