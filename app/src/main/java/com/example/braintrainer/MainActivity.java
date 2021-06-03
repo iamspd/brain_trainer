@@ -3,6 +3,7 @@ package com.example.braintrainer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -11,6 +12,9 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
+
+    // constants
+    private static final String TAG = "MainActivity";
 
     // widgets
     private Button btnGo, btn0, btn1, btn2, btn3;
@@ -23,6 +27,12 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> sumAnswers;
 
     // methods
+    public void onAnswerButtonClick(View view){
+
+        Log.i(TAG, (String) view.getTag());
+
+    }
+
     public void onGoClick(View view){
         btnGo.setVisibility(View.INVISIBLE);
     }
