@@ -7,6 +7,7 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     // widgets
     private Button btnGo, btn0, btn1, btn2, btn3, btnPlayAgain;
     private TextView tvSum, tvScore, tvTimer, tvResult;
+    private RelativeLayout childRelativeLayout;
 
     // variables
     private Random randomNumber;
@@ -128,7 +130,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onGoClick(View view) {
+
         btnGo.setVisibility(View.INVISIBLE);
+        childRelativeLayout.setVisibility(View.VISIBLE);
     }
 
     private void findAllViews() {
@@ -143,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
         tvScore = findViewById(R.id.tvScore);
         tvTimer = findViewById(R.id.tvTimer);
         btnPlayAgain = findViewById(R.id.btnPlayAgain);
+        childRelativeLayout = findViewById(R.id.childRelativeLayout);
 
     }
 
