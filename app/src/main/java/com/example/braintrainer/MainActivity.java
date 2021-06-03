@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
 
     // widgets
-    private Button btnGo, btn0, btn1, btn2, btn3;
+    private Button btnGo, btn0, btn1, btn2, btn3, btnPlayAgain;
     private TextView tvSum, tvScore, tvTimer, tvResult;
 
     // variables
@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Integer> sumAnswers;
 
     // methods
+
     public void generateQuestion() {
 
         sumAnswers = new ArrayList<>();
@@ -110,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
         tvResult = findViewById(R.id.tvResult);
         tvScore = findViewById(R.id.tvScore);
         tvTimer = findViewById(R.id.tvTimer);
+        btnPlayAgain = findViewById(R.id.btnPlayAgain);
 
     }
 
