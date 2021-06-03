@@ -62,7 +62,13 @@ public class MainActivity extends AppCompatActivity {
 
                 inCorrectAnswers = randomNumber.nextInt(41);
 
-                // sumAnswers.add()
+                while (inCorrectAnswers == correctAnswer) {
+
+                    inCorrectAnswers = randomNumber.nextInt(41);
+
+                }
+
+                sumAnswers.add(inCorrectAnswers);
 
             }
 
