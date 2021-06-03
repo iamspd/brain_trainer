@@ -13,7 +13,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     // widgets
-    private Button btnGo;
+    private Button btnGo, btn0, btn1, btn2, btn3;
     private TextView tvSum;
 
     // variables
@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnGo = findViewById(R.id.btnGo);
         tvSum = findViewById(R.id.tvSum);
+        btn0 = findViewById(R.id.btn0);
+        btn1 = findViewById(R.id.btn1);
+        btn2 = findViewById(R.id.btn2);
+        btn3 = findViewById(R.id.btn3);
 
     }
 
@@ -40,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findAllViews();
+
+        sumAnswers = new ArrayList<>();
 
         // generate a random number having the limit for 20 numbers (0-20)
         randomNumber = new Random();
@@ -73,6 +79,11 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }
+
+        btn0.setText(Integer.toString(sumAnswers.get(0)));
+        btn1.setText(Integer.toString(sumAnswers.get(1)));
+        btn2.setText(Integer.toString(sumAnswers.get(2)));
+        btn3.setText(Integer.toString(sumAnswers.get(3)));
     }
 
 }

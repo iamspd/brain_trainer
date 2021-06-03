@@ -63,7 +63,8 @@
         android:layout_marginTop="48dp"
         android:layout_marginEnd="12dp">
 
-        <com.google.android.material.button.MaterialButton
+        <Button
+            android:id="@+id/btn0"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -73,11 +74,11 @@
             android:layout_gravity="fill"
             android:backgroundTint="@color/color_primary"
             android:padding="24dp"
-            android:tag="0"
             android:text="@android:string/ok"
             android:textSize="54sp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
+            android:id="@+id/btn1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
@@ -87,12 +88,12 @@
             android:layout_gravity="fill"
             android:backgroundTint="@color/color_light"
             android:padding="24dp"
-            android:tag="1"
             android:text="@android:string/ok"
             android:textColor="@color/color_primary_dark"
             android:textSize="54sp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
+            android:id="@+id/btn2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -102,11 +103,12 @@
             android:layout_gravity="fill"
             android:backgroundTint="@color/color_accent"
             android:padding="24dp"
-            android:tag="2"
+            android:layout_marginEnd="6dp"
             android:text="@android:string/ok"
             android:textSize="54sp" />
 
-        <com.google.android.material.button.MaterialButton
+        <Button
+            android:id="@+id/btn3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -114,9 +116,9 @@
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
+            android:layout_marginStart="6dp"
             android:backgroundTint="@color/color_secondary_dark"
             android:padding="24dp"
-            android:tag="3"
             android:text="@android:string/ok"
             android:textSize="54sp" />
 
