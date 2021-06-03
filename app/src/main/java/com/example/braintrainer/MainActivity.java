@@ -133,6 +133,8 @@ public class MainActivity extends AppCompatActivity {
 
         btnGo.setVisibility(View.INVISIBLE);
         childRelativeLayout.setVisibility(View.VISIBLE);
+
+        onPlayGameAgainClick(btnPlayAgain);
     }
 
     private void findAllViews() {
@@ -157,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         findAllViews();
-        onPlayGameAgainClick(btnPlayAgain);
 
     }
 
