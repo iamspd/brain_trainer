@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     // widgets
     private Button btnGo, btn0, btn1, btn2, btn3;
-    private TextView tvSum;
+    private TextView tvSum, tvScore, tvTimer, tvResult;
 
     // variables
     private Random randomNumber;
@@ -31,9 +31,14 @@ public class MainActivity extends AppCompatActivity {
 
         // Log.i(TAG, (String) view.getTag());
 
-        if (view.getTag().equals(locationOfCorrectAnswers)){
+        if (view.getTag().toString().equals(Integer.toString(locationOfCorrectAnswers))){
 
             Log.i("Answer is: ", "correct");
+            tvResult.setText("Correct");
+
+        } else {
+
+            tvResult.setText("Incorrect! Try next time.");
 
         }
 
@@ -51,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         btn3 = findViewById(R.id.btn3);
+        tvResult = findViewById(R.id.tvResult);
 
     }
 
