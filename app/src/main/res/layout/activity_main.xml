@@ -68,15 +68,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:tag="0"
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
-            android:onClick="onAnswerButtonClick"
             android:layout_marginEnd="6dp"
             android:backgroundTint="@color/color_primary"
+            android:onClick="onAnswerButtonClick"
             android:padding="24dp"
+            android:tag="0"
             android:text="@android:string/ok"
             android:textSize="54sp" />
 
@@ -85,15 +85,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="0"
-            android:tag="1"
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_marginStart="6dp"
             android:backgroundTint="@color/color_light"
-            android:padding="24dp"
             android:onClick="onAnswerButtonClick"
+            android:padding="24dp"
+            android:tag="1"
             android:text="@android:string/ok"
             android:textColor="@color/color_primary_dark"
             android:textSize="54sp" />
@@ -104,14 +104,14 @@
             android:layout_height="wrap_content"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:tag="2"
             android:layout_column="0"
             android:layout_columnWeight="1"
             android:layout_gravity="fill"
             android:layout_marginEnd="6dp"
             android:backgroundTint="@color/color_accent"
-            android:padding="24dp"
             android:onClick="onAnswerButtonClick"
+            android:padding="24dp"
+            android:tag="2"
             android:text="@android:string/ok"
             android:textSize="54sp" />
 
@@ -123,12 +123,12 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:tag="3"
-            android:onClick="onAnswerButtonClick"
             android:layout_gravity="fill"
             android:layout_marginStart="6dp"
             android:backgroundTint="@color/color_secondary_dark"
+            android:onClick="onAnswerButtonClick"
             android:padding="24dp"
+            android:tag="3"
             android:text="@android:string/ok"
             android:textSize="54sp" />
 
@@ -140,8 +140,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnGo"
         android:layout_centerHorizontal="true"
-        android:text="Correct!"
         android:textColor="@color/color_primary_dark"
-        android:textSize="42sp" />
+        android:textSize="42sp"
+        tools:text="@android:string/ok" />
 
 </RelativeLayout>
